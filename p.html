@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Attendance & Leave Tracker</title>
+  <link rel="stylesheet" href="p.css" />
+</head>
+<body>
+  <!-- Login Section -->
+  <div id="login-section">
+    <h2>Login</h2>
+    <label>Username:</label><input type="text" id="login-username" placeholder="Enter username" /><br />
+    <label>Password:</label><input type="password" id="login-password" placeholder="Enter password" /><br />
+    <button id="login-btn">Login</button>
+  </div>
+
+  <!-- Main App Container -->
+  <div class="container">
+    <h1>Smart Attendance & Leave Tracking System</h1>
+
+    <section id="attendance-section">
+      <h2>Mark Attendance</h2>
+      <video id="video" autoplay></video><br />
+      <label>Name:</label><input type="text" id="att-name" placeholder="Enter name" /><br />
+      <label>Subject:</label><input type="text" id="att-subject" placeholder="Enter subject" /><br />
+      <button id="capture-btn">Capture & Mark Attendance</button>
+    </section>
+
+    <section id="leave-section">
+      <h2>Apply for Leave</h2>
+      <label>Name:</label><input type="text" id="leave-name" placeholder="Your name" /><br />
+      <label>From:</label><input type="date" id="leave-from" /><br />
+      <label>To:</label><input type="date" id="leave-to" /><br />
+      <label>Reason:</label><textarea id="leave-reason" placeholder="Reason for leave"></textarea><br />
+      <button id="apply-leave-btn">Submit Leave Application</button>
+    </section>
+
+    <section id="notes-section">
+      <h2>Notes</h2>
+      <textarea id="notes-text" placeholder="Write your notes here..."></textarea><br />
+      <button id="save-notes-btn">Save Notes</button>
+    </section>
+
+    <section id="search-filter-section">
+      <h2>Search & Filter</h2>
+      <input type="text" id="search-name" placeholder="Search by name" />
+      <input type="date" id="search-date" />
+      <button id="clear-filters">Clear Filters</button>
+    </section>
+
+    <section id="report-section">
+      <h2>Attendance & Leave Report</h2>
+      <div id="summary"></div>
+      <table id="report-table">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Name</th>
+            <th>Subject / Dates</th>
+            <th>Time / Reason</th>
+            <th>Photo</th>
+            <th>Notes</th>
+            <th>Edit</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="p.js"></script>
+</body>
+</html>
